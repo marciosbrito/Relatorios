@@ -29,7 +29,7 @@ if st.sidebar.checkbox("Entrar"):
         tipo = st.selectbox("Selecione o Tipo de Manutenção",["Preventiva","Corretiva"])
         tecnico1 = st.text_input('Nome do Técnico 1')
         tecnico2 = st.text_input('Nome do Técnico 2')
-        data = st.date_input('Digite a Data')
+        data = st.date_input('Digite a Data', format=('DD/MM/YYYY'))
         h_inicio = st.time_input('Hora Inicial')
         h_final = st.time_input('Hora Final')
         descricao = st.text_area('Descrição do Serviço')
