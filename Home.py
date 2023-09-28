@@ -45,7 +45,7 @@ if st.sidebar.checkbox("Entrar"):
             st.caption(f':blue[Data]: {data}')
             st.caption(f':blue[Hora Inicial do Atendimento]: {h_inicio}')
             st.caption(f':blue[Hora Final do Atendimento]: {h_final}')
-            st.caption(f':blue[Dercição dos serviços Executados]: {descricao.upper()}')
+            st.caption(f':blue[Descrição dos serviços Executados]: {descricao.upper()}')
             if imagem:
                 st.image(imagem)
     else:
