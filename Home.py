@@ -23,7 +23,7 @@ senha = st.sidebar.text_input("Senha", type="password")
 if st.sidebar.checkbox("Entrar"):
     if autenticar_usuario(usuario, senha):
         st.sidebar.success("Login bem-sucedido!")
-        st.header('Relatório de Visitas')
+        cabecalho = ('Relatório de Visitas')
         titulo = Image.open('Logo_Telefonica2.png')
         cliente = st.text_input('Cliente')
         tipo = st.selectbox("Selecione o Tipo de Manutenção",["Preventiva","Corretiva"])
@@ -36,6 +36,7 @@ if st.sidebar.checkbox("Entrar"):
         imagem = st.file_uploader("Faça o upload das imagens (JPEG ou PNG)", type=["jpg", "jpeg", "png"], accept_multiple_files=True)
         if st.button('Mostrar Relatorio'):
             st.image(titulo)
+            st.header(cabecalho)
             st.caption(f':blue[Cliente]: {cliente.upper()}')
             if tipo:
                 st.write(f':blue[Tipo de Manutenção]: {tipo}')
